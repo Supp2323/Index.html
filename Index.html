@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CampusBae</title>
+<style>
+    body { font-family: Arial, sans-serif; background: #F5F5F5; margin: 0; padding: 0; color: #333333; }
+    header { background: #FFC107; color: white; padding: 20px; text-align: center; }
+    header h1 { color: #FF69B4; font-size: 2.5em; margin: 0; }
+    nav a { margin: 0 15px; color: white; text-decoration: none; font-weight: bold; }
+    main { padding: 20px; text-align: center; }
+    button { background: #FF69B4; border: none; padding: 12px 25px; font-size: 1em; color: white; cursor: pointer; border-radius: 8px; transition: 0.3s; }
+    button:hover { background: #FFC107; color: #333333; }
+    form { display: inline-block; text-align: left; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.1); margin-top: 20px; }
+    input, select { width: 100%; padding: 10px; margin: 10px 0; border-radius: 8px; border: 1px solid #ccc; }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>CampusBae</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#signup">Sign Up</a>
+        <a href="#">Login</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Meet and connect with students from your university!</h2>
+    <p>Find friends, join fun campus activities, and never miss out on campus life.</p>
+    <button onclick="document.getElementById('signup').scrollIntoView({behavior: 'smooth'})">Sign Up Now</button>
+
+    <div id="signup">
+        <form id="signupForm">
+            <h3>Create Your CampusBae Account</h3>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="University Email" required>
+            <select required>
+                <option value="">Select Your University</option>
+                <option value="UL">University of Limpopo</option>
+                <option value="UP">University of Pretoria</option>
+                <option value="UJ">University of Johannesburg</option>
+                <option value="UCT">University of Cape Town</option>
+            </select>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</main>
+
+<script>
+document.getElementById('signupForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Welcome to CampusBae! (Demo Prototype)');
+});
+</script>
+
+</body>
+</html>
